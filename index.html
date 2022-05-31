@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <!-- FIM -->
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- FIM -->
+
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Componente de pre&ccedil;os">
+    <meta name="application-name" content="Componente de pre&ccedil;os">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FIM -->
+
+
+    <!-- METADADOS -->
+    <link rel="canonical" href="https://leo-henrique.github.io/componente-de-precos/" />
+    <meta name="author" content="Leonardo Henrique" />
+    <meta name="description" content="Desafio do Frontend Mentor com o objetivo de desenvolver um componente de preços interativo com controle deslizante. Solucionado por Leonardo Henrique." />
+    <meta name="generator" content="Visual Studio Code" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <!-- OPEN GRAPH PROTOCOL -->
+        <meta name="og:locale" content="pt_BR" />
+        <meta name="og:type" content="website" />
+        <meta name="og:site_name" content="Componente de preços interativo" />
+        <meta name="og:title" content="Componente de preços interativo | Leonardo Henrique" />
+        <meta name="og:description" content="Desafio do Frontend Mentor com o objetivo de desenvolver um componente de preços interativo com controle deslizante. Solucionado por Leonardo Henrique." />
+        <meta name="og:url" content="https://leo-henrique.github.io/componente-de-precos/" />
+        <meta name="og:image" content="https://leo-henrique.github.io/componente-de-precos/images/favicon/og-image.png" />
+        <meta name="og:image:alt" content="Favicon do site" />
+        <!-- FIM -->
+    <!-- FIM -->
+
+    <title>Componente de preços interativo | Leonardo Henrique</title>
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1>
+                Preços simples e baseados no tráfego
+            </h1>
+    
+            <p>
+                Inscreva-se para nosso teste de 30 dias. Não é necessário cartão de crédito.
+            </p>
+        </header>
+
+        <div class="card">
+            <div class="card-price">
+                <div>
+                    <span>
+                        100 mil visualizações de página
+                    </span>
+        
+                    <div>
+                        <span>
+                            $0.00
+                        </span>
+                        <span>
+                            / mês
+                        </span>
+                    </div>
+                </div>
+    
+                <form>
+                    <label for="range">
+                        <input type="range"
+                        id="range"
+                        name="range"
+                        min="0"
+                        max="6"
+                        step="1"
+                        value="3">
+                    </label>
+                </form>
+    
+                <div>
+                    <span>
+                        Faturamento mensal
+                    </span>
+    
+                    <button type="button">
+                    </button>
+    
+                    <span>
+                        Faturamento anual
+                    </span>
+    
+                    <span>25% de desconto</span>
+                </div>
+            </div>
+
+            <div class="card-action">
+                <ul>
+                    <li>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                                <path fill="none" stroke="#10D8C4" stroke-width="2" d="m1 4.134 1.907 1.908L7.949 1"/>
+                            </svg>
+                        </div>
+                        <span>
+                            Sites ilimitados
+                        </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                                <path fill="none" stroke="#10D8C4" stroke-width="2" d="m1 4.134 1.907 1.908L7.949 1"/>
+                            </svg>
+                        </div>
+                        <span>
+                            100% de propriedade de dados
+                        </span>
+                    </li>
+
+                    <li>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
+                                <path fill="none" stroke="#10D8C4" stroke-width="2" d="m1 4.134 1.907 1.908L7.949 1"/>
+                            </svg>
+                        </div>
+                        <span>
+                            Relatórios por e-mail
+                        </span>
+                    </li>
+                </ul>
+
+                <div>
+                    <button type="button">
+                        Iniciar meu teste
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                <span>Desafio do </span>
+                <a href="https://www.frontendmentor.io/home"
+                target="_blank"
+                rel="external noopener noreferrer">
+                    Frontend Mentor.
+                </a>
+            </p>
+
+            <p>
+                <span>Desenvolvido por </span>
+                <a href="https://www.linkedin.com/in/leonardo-henrique-/"
+                target="_blank"
+                rel="external noopener noreferrer">
+                    Leonardo Henrique.
+                </a>
+            </p>
+        </footer>
+    </main>
+    
+</body>
+</html>
