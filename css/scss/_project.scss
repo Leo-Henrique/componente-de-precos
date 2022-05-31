@@ -1,0 +1,125 @@
+body {
+    background: $support-light-2 url("../images/bg-pattern.svg") no-repeat 0 0 / 100% 60%;
+    min-height: 100vh;
+    padding-top: 6rem;
+    font-family: "Manrope", sans-serif;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+
+    header {
+        background: url("../images/pattern-circles.svg") no-repeat center;
+        text-align: center;
+        padding: calc(7.4rem / 2 + 2rem) 0;
+
+        h1 {
+            @include font-size($h1);
+            line-height: 1.1;
+            font-weight: 800;
+            color: $primary;
+            margin-bottom: 1.6rem;
+        }
+        p {
+            font-size: $body;
+            font-weight: 600;
+            line-height: 1.4;
+            color: $support-light-5;
+        }
+    }
+}
+
+.card {
+    background-color: $support-light-1;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    width: 100%;
+    padding: 4.5rem;
+
+    &-price {
+        border-bottom: 1px solid $support-light-3;
+    }
+    &-price .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+
+        > * {
+            flex: 1;
+        }
+        .pageviews {
+            font-size: $body;
+            font-weight: 800;
+            line-height: 1.4;
+            color: $support-light-5;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        .price {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            column-gap: 0.6rem;
+        }
+        .price span:nth-child(1) {
+            @include font-size($price);
+            font-weight: 800;
+            color: $primary;
+        }
+        .price span:nth-child(2) {
+            font-size: $body;
+            font-weight: 600;
+            line-height: 1.4;
+            color: $support-light-5;
+            word-spacing: nowrap;
+        }
+    }
+    &-price .slider {
+        margin: calc(15px + 4rem) 0;
+        
+        input {
+            // hide standard style
+            -webkit-appearance: none;
+            width: 100%;
+            background: none;
+
+            /* TRACK: LINHA */
+            &::-webkit-slider-runnable-track {
+                @include slider-track;
+            }
+            &::-moz-range-track {
+                @include slider-track;
+            }
+            &::-ms-track {
+                @include slider-track;
+
+                // hide standard style
+                border-color: transparent;
+                color: transparent;
+            }
+            /* FIM */
+
+            /* THUMB: POLEGAR */
+            &::-webkit-slider-thumb {
+                @include slider-thumb;
+
+                // hide standard style
+                -webkit-appearance: none;
+                /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+                margin-top: $size-sliderThumb / -2 + $height-sliderTrack / 2;
+            }
+            &::-moz-range-thumb {
+                @include slider-thumb;
+            }
+            &::-ms-thumb {
+                @include slider-thumb;
+            }
+            /* FIM */
+        }
+    }
+    &-price .period {
+        
+    }
+}

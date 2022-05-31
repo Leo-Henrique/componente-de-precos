@@ -3,3 +3,31 @@
         @content;
     }
 }
+
+@mixin slider-track {
+    border: none;
+    width: 100%;
+    height: $height-sliderTrack;
+    cursor: pointer;
+    background-color: $support-light-3;
+    border-radius: 20px;
+}
+
+@mixin slider-thumb {
+    border: none;
+    width: $size-sliderThumb;
+    height: $size-sliderThumb;
+    border-radius: 50%;
+    background: $secondary url("../images/icon-slider.svg") no-repeat center;
+    cursor: pointer;
+    box-shadow: 0px 15px 25px rgba(16, 213, 194, 0.5);
+    transition: background-color 200ms ease-in-out;
+
+    &:hover {
+        background-color: rgba(16, 213, 194, 0.6);
+    }
+    &:active {
+        background-color: $secondary-dark-1;
+        cursor: grabbing;
+    }
+}
