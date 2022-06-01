@@ -23,8 +23,10 @@
     box-shadow: 0px 15px 25px rgba(16, 213, 194, 0.5);
     transition: background-color 200ms ease-in-out;
 
-    &:hover {
-        background-color: rgba(16, 213, 194, 0.6);
+    @include desktop-supported {
+        &:hover {
+            background-color: rgba(16, 213, 194, 0.6);
+        }
     }
     &:active {
         background-color: $secondary-dark-1;

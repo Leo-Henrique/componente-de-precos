@@ -1,18 +1,21 @@
 body {
     background: $support-light-2 url("../images/bg-pattern.svg") no-repeat 0 0 / 100% 60%;
     min-height: 100vh;
-    padding-top: 6rem;
+    padding: 2rem 4rem;
     font-family: "Manrope", sans-serif;
+    font-size: $body;
+    line-height: 1.4;
+    color: $support-light-5;
 }
 
 main {
-    max-width: 600px;
+    max-width: 630px;
     margin: 0 auto;
 
     header {
         background: url("../images/pattern-circles.svg") no-repeat center;
         text-align: center;
-        padding: calc(7.4rem / 2 + 2rem) 0;
+        padding: calc(7.4rem / 2 + 5rem) 0;
 
         h1 {
             @include font-size($h1);
@@ -22,10 +25,28 @@ main {
             margin-bottom: 1.6rem;
         }
         p {
-            font-size: $body;
             font-weight: 600;
-            line-height: 1.4;
-            color: $support-light-5;
+        }
+    }
+    footer {
+        font-size: 1.3rem;
+        line-height: 1.3;
+        text-align: center;
+        padding-top: calc(5rem - 2rem);
+
+        p, a {
+            display: inline-block;
+        }
+        a {
+            padding: 2rem 0;
+            color: $primary;
+            transition: color 200ms ease-in-out;
+
+            @include desktop-supported {
+                &:hover {
+                    color: #293356 + 50%;
+                }
+            }
         }
     }
 }
@@ -38,46 +59,42 @@ main {
     padding: 4.5rem;
 
     &-price {
+        display: flex;
+        flex-wrap: wrap;
         border-bottom: 1px solid $support-light-3;
+        padding-bottom: 4rem;
+        margin-bottom: 4rem;
     }
-    &-price .info {
+    &-price .pageviews {
+        flex: 1 50%;
+        align-self: center;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        padding-right: 2rem;
+    }
+    &-price .price {
+        flex: 1 50%;
+        align-self: center;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 4rem;
+        justify-content: flex-end;
+        column-gap: 0.6rem;
+        padding-left: 2rem;
 
-        > * {
-            flex: 1;
-        }
-        .pageviews {
-            font-size: $body;
-            font-weight: 800;
-            line-height: 1.4;
-            color: $support-light-5;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-        }
-        .price {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            column-gap: 0.6rem;
-        }
-        .price span:nth-child(1) {
+        span:nth-child(1) {
             @include font-size($price);
             font-weight: 800;
             color: $primary;
         }
-        .price span:nth-child(2) {
-            font-size: $body;
+        span:nth-child(2) {
             font-weight: 600;
-            line-height: 1.4;
-            color: $support-light-5;
-            word-spacing: nowrap;
+            white-space: nowrap;
         }
     }
     &-price .slider {
-        margin: calc(15px + 4rem) 0;
+        flex: 1 0 100%;
+        margin: calc(9px + 4rem) 0;
         
         input {
             // hide standard style
@@ -120,6 +137,138 @@ main {
         }
     }
     &-price .period {
-        
+        flex: 1 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        > * {
+            flex: 1;
+        }
+        .month {
+            text-align: right;
+        }
+        .month,
+        .year .text {
+            font-size: 1.4rem;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+        .toggle {
+            flex: 0 0 55px;
+            display: inline-block;
+            position: relative;
+            width: 55px;
+            height: 25px;
+
+            input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            span {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: $support-light-4;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: background-color 200ms ease-in-out;
+
+                @include desktop-supported {
+                    &:hover {
+                        background-color: $secondary-light-1;
+                    }
+                }
+            }
+            span::before {
+                content: "";
+                position: absolute;
+                left: 4px;
+                bottom: 4px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background-color: $support-light-1;
+                transition: transform 200ms ease-in-out;
+            }
+            input:checked + span {
+                background-color: $secondary;
+
+                &::before {
+                    transform: translate3D(29px, 0, 0);
+                }
+            }
+        }
+        .year {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 1rem;
+            line-height: 1.2;
+        }
+        .year .text {
+            flex: 2;
+        }
+        .year .discount {
+            flex: 1;
+            display: inline-block;
+            background-color: $discount-bg;
+            font-size: $small;
+            text-align: center;
+            color: $discount-text;
+            border-radius: 15px;
+            padding: 4px 7px;
+
+            abbr {
+                display: none;
+            }
+        }
+    }
+
+    &-action {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+
+        > * {
+            flex: 1;
+        }
+        .benefits li {
+            display: flex;
+            align-items: center;
+            column-gap: 1.6rem;
+            font-size: 1.4rem;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+        .benefits li + li {
+            margin-top: calc(1.6rem - 0.4rem);
+        }
+        .cta {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .cta button {
+            background-color: $primary;
+            border-radius: 30px;
+            color: $primary-light-1;
+            text-align: center;
+            padding: 1.4rem 4.2rem;
+            cursor: pointer;
+            transition: color 200ms ease-in-out;
+
+            @include desktop-supported {
+                &:hover {
+                    color: $support-light-1;
+                }
+            }
+            &:active {
+                color: $support-light-1;
+            }
+        }
     }
 }

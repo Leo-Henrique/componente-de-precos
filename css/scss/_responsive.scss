@@ -1,0 +1,101 @@
+@media (max-width: 650px) {
+    body {
+        background-size: 100% 50%;
+        padding: 2rem;
+        font-size: $body-sm;
+        line-height: 1.35;
+    }
+
+    main footer {
+        padding-top: calc(4rem - 0.4rem);
+        p {
+            display: block;
+        }
+        a {
+            padding: 0.4rem 0;
+        }
+    }
+
+    .card {
+        padding: 4.5rem 2.5rem;
+
+        &-price {
+            padding-bottom: 3.5rem;
+            margin-bottom: 3.5rem;
+
+            .pageviews {
+                flex: 1 100%;
+                padding-right: 0;
+                order: -2;
+                text-align: center;
+            }
+            .price {
+                flex: 1 100%;
+                justify-content: center;
+                padding-left: 0;
+                text-align: center;
+                margin-bottom: 3.5rem;
+            }
+            .slider {
+                order: -1;
+                margin: calc(9px + 3.5rem) 0;
+            }
+            .period  {
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            .period .month {
+                margin-top: calc(25px / 2 - 15px / 2);
+            }
+            .period .month,
+            .period .year .text {
+                font-size: 1.3rem;
+                line-height: 1.2;
+
+                &:first-letter {
+                    text-transform: uppercase;
+                }
+                span {
+                    display: none;
+                }
+            }
+            .period .year {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                row-gap: 0.6rem;
+
+                .text {
+                    flex: initial;
+                }
+                .discount {
+                    flex: initial;
+                    padding: 4px 8px;
+                }
+                .discount span {
+                    display: none;
+                }
+                .discount abbr {
+                    display: inline-block;
+                }
+            }
+        }
+        &-action {
+            flex-direction: column;
+            text-align: center;
+            gap: 3.5rem;
+            > * {
+                flex: initial;
+            }
+            .benefits li {
+                justify-content: center;
+                column-gap: 0.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px)  {
+    main header {
+        padding: calc(7.4rem / 2 + 2rem) 0;
+    }
+}

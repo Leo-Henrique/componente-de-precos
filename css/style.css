@@ -460,23 +460,26 @@ svg {
 body {
   background: #fafbff url("../images/bg-pattern.svg") no-repeat 0 0/100% 60%;
   min-height: 100vh;
-  padding-top: 6rem;
+  padding: 2rem 4rem;
   font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #858fad;
 }
 
 main {
-  max-width: 600px;
+  max-width: 630px;
   margin: 0 auto;
 }
 
 main header {
   background: url("../images/pattern-circles.svg") no-repeat center;
   text-align: center;
-  padding: calc(7.4rem / 2 + 2rem) 0;
+  padding: calc(7.4rem / 2 + 5rem) 0;
 }
 
 main header h1 {
-  font-size: calc(2.024rem + 0.98vw);
+  font-size: calc(2.04rem + 0.96667vw);
   line-height: 1.1;
   font-weight: 800;
   color: #293356;
@@ -490,10 +493,30 @@ main header h1 {
 }
 
 main header p {
-  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.4;
-  color: #858fad;
+}
+
+main footer {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  text-align: center;
+  padding-top: calc(5rem - 2rem);
+}
+
+main footer p, main footer a {
+  display: inline-block;
+}
+
+main footer a {
+  padding: 2rem 0;
+  color: #293356;
+  transition: color 200ms ease-in-out;
+}
+
+@media not all and (hover: none) {
+  main footer a:hover {
+    color: #5b6588;
+  }
 }
 
 .card {
@@ -505,58 +528,52 @@ main header p {
 }
 
 .card-price {
-  border-bottom: 1px solid #eaeefb;
-}
-
-.card-price .info {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eaeefb;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
-.card-price .info > * {
-  flex: 1;
-}
-
-.card-price .info .pageviews {
-  font-size: 1.5rem;
+.card-price .pageviews {
+  flex: 1 50%;
+  align-self: center;
   font-weight: 800;
-  line-height: 1.4;
-  color: #858fad;
   text-transform: uppercase;
   letter-spacing: 0.8px;
+  padding-right: 2rem;
 }
 
-.card-price .info .price {
+.card-price .price {
+  flex: 1 50%;
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   column-gap: 0.6rem;
+  padding-left: 2rem;
 }
 
-.card-price .info .price span:nth-child(1) {
-  font-size: calc(2.044rem + 1.79667vw);
+.card-price .price span:nth-child(1) {
+  font-size: calc(2.07333rem + 1.77222vw);
   font-weight: 800;
   color: #293356;
 }
 
 @media (min-width: 1200px) {
-  .card-price .info .price span:nth-child(1) {
+  .card-price .price span:nth-child(1) {
     font-size: 4.2rem;
   }
 }
 
-.card-price .info .price span:nth-child(2) {
-  font-size: 1.5rem;
+.card-price .price span:nth-child(2) {
   font-weight: 600;
-  line-height: 1.4;
-  color: #858fad;
-  word-spacing: nowrap;
+  white-space: nowrap;
 }
 
 .card-price .slider {
-  margin: calc(15px + 4rem) 0;
+  flex: 1 0 100%;
+  margin: calc(9px + 4rem) 0;
 }
 
 .card-price .slider input {
@@ -612,8 +629,10 @@ main header p {
   margin-top: -15px;
 }
 
-.card-price .slider input::-webkit-slider-thumb:hover {
-  background-color: rgba(16, 213, 194, 0.6);
+@media not all and (hover: none) {
+  .card-price .slider input::-webkit-slider-thumb:hover {
+    background-color: rgba(16, 213, 194, 0.6);
+  }
 }
 
 .card-price .slider input::-webkit-slider-thumb:active {
@@ -632,8 +651,10 @@ main header p {
   transition: background-color 200ms ease-in-out;
 }
 
-.card-price .slider input::-moz-range-thumb:hover {
-  background-color: rgba(16, 213, 194, 0.6);
+@media not all and (hover: none) {
+  .card-price .slider input::-moz-range-thumb:hover {
+    background-color: rgba(16, 213, 194, 0.6);
+  }
 }
 
 .card-price .slider input::-moz-range-thumb:active {
@@ -652,11 +673,261 @@ main header p {
   transition: background-color 200ms ease-in-out;
 }
 
-.card-price .slider input::-ms-thumb:hover {
-  background-color: rgba(16, 213, 194, 0.6);
+@media not all and (hover: none) {
+  .card-price .slider input::-ms-thumb:hover {
+    background-color: rgba(16, 213, 194, 0.6);
+  }
 }
 
 .card-price .slider input::-ms-thumb:active {
   background-color: #00b7a4;
   cursor: grabbing;
+}
+
+.card-price .period {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-price .period > * {
+  flex: 1;
+}
+
+.card-price .period .month {
+  text-align: right;
+}
+
+.card-price .period .month,
+.card-price .period .year .text {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.card-price .period .toggle {
+  flex: 0 0 55px;
+  display: inline-block;
+  position: relative;
+  width: 55px;
+  height: 25px;
+}
+
+.card-price .period .toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.card-price .period .toggle span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #cdd7ee;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+@media not all and (hover: none) {
+  .card-price .period .toggle span:hover {
+    background-color: #a5f3eb;
+  }
+}
+
+.card-price .period .toggle span::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: transform 200ms ease-in-out;
+}
+
+.card-price .period .toggle input:checked + span {
+  background-color: #10d5c2;
+}
+
+.card-price .period .toggle input:checked + span::before {
+  transform: translate3D(29px, 0, 0);
+}
+
+.card-price .period .year {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+  line-height: 1.2;
+}
+
+.card-price .period .year .text {
+  flex: 2;
+}
+
+.card-price .period .year .discount {
+  flex: 1;
+  display: inline-block;
+  background-color: #feece7;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #ff8c66;
+  border-radius: 15px;
+  padding: 4px 7px;
+}
+
+.card-price .period .year .discount abbr {
+  display: none;
+}
+
+.card-action {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.card-action > * {
+  flex: 1;
+}
+
+.card-action .benefits li {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.card-action .benefits li + li {
+  margin-top: calc(1.6rem - 0.4rem);
+}
+
+.card-action .cta {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-action .cta button {
+  background-color: #293356;
+  border-radius: 30px;
+  color: #bdccff;
+  text-align: center;
+  padding: 1.4rem 4.2rem;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+}
+
+@media not all and (hover: none) {
+  .card-action .cta button:hover {
+    color: #ffffff;
+  }
+}
+
+.card-action .cta button:active {
+  color: #ffffff;
+}
+
+@media (max-width: 650px) {
+  body {
+    background-size: 100% 50%;
+    padding: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.35;
+  }
+  main footer {
+    padding-top: calc(4rem - 0.4rem);
+  }
+  main footer p {
+    display: block;
+  }
+  main footer a {
+    padding: 0.4rem 0;
+  }
+  .card {
+    padding: 4.5rem 2.5rem;
+  }
+  .card-price {
+    padding-bottom: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .card-price .pageviews {
+    flex: 1 100%;
+    padding-right: 0;
+    order: -2;
+    text-align: center;
+  }
+  .card-price .price {
+    flex: 1 100%;
+    justify-content: center;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  .card-price .slider {
+    order: -1;
+    margin: calc(9px + 3.5rem) 0;
+  }
+  .card-price .period {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .card-price .period .month {
+    margin-top: calc(25px / 2 - 15px / 2);
+  }
+  .card-price .period .month,
+  .card-price .period .year .text {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+  .card-price .period .month:first-letter,
+  .card-price .period .year .text:first-letter {
+    text-transform: uppercase;
+  }
+  .card-price .period .month span,
+  .card-price .period .year .text span {
+    display: none;
+  }
+  .card-price .period .year {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 0.6rem;
+  }
+  .card-price .period .year .text {
+    flex: initial;
+  }
+  .card-price .period .year .discount {
+    flex: initial;
+    padding: 4px 8px;
+  }
+  .card-price .period .year .discount span {
+    display: none;
+  }
+  .card-price .period .year .discount abbr {
+    display: inline-block;
+  }
+  .card-action {
+    flex-direction: column;
+    text-align: center;
+    gap: 3.5rem;
+  }
+  .card-action > * {
+    flex: initial;
+  }
+  .card-action .benefits li {
+    justify-content: center;
+    column-gap: 0.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  main header {
+    padding: calc(7.4rem / 2 + 2rem) 0;
+  }
 }
