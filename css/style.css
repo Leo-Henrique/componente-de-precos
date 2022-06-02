@@ -593,6 +593,7 @@ main footer a {
   cursor: pointer;
   background-color: #eaeefb;
   border-radius: 20px;
+  background-image: var(--background, initial);
 }
 
 .card-price .slider input::-moz-range-track {
@@ -602,6 +603,7 @@ main footer a {
   cursor: pointer;
   background-color: #eaeefb;
   border-radius: 20px;
+  background-image: var(--background, initial);
 }
 
 .card-price .slider input::-ms-track {
@@ -611,6 +613,7 @@ main footer a {
   cursor: pointer;
   background-color: #eaeefb;
   border-radius: 20px;
+  background-image: var(--background, initial);
   border-color: transparent;
   color: transparent;
 }
