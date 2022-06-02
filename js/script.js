@@ -6,9 +6,9 @@ const btnToggle = document.querySelector(".toggle > input");
 function handlePrice() {
     const pageviews = document.querySelector(".pageviews > span:nth-child(1)");
     const price = document.querySelector(".price > span:nth-child(1)");
-    const sliderCurrentValue = +slider.value;
-    const priceValues = [8, 12, 16, 24, 36];
     const pageviewsValues = ["10 mil", "50 mil", "100 mil", "500 mil", "1 milhão"];
+    const priceValues = [8, 12, 16, 24, 36];
+    const sliderCurrentValue = +slider.value;
 
     function monthlyPrice(priceValue, index) {
         const monthlyPrice = priceValue.toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
