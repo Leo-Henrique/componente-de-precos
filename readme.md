@@ -121,7 +121,7 @@ function handleSliderBackground() {
     slider.style.setProperty("--background", setPercentages);
 }
 ```
-![Porcentagens do linear gradient sendo adicionadas ao slider](https://user-images.githubusercontent.com/72027449/171923354-4645e0d6-7305-48df-ab31-141162750ed1.gif)
+![Porcentagens do linear gradient sendo adicionadas ao slider](https://user-images.githubusercontent.com/72027449/171924223-1fea1d0c-fef9-4140-9ffb-29c638b843d3.gif)
 
 
 #### Toggle button
@@ -170,7 +170,8 @@ input:checked + span {
 }
 ```
 
-Com isso, o botão já está totalmente criado e o JavaScript fica apenas responsável por setar o que vai acontecer quando esse botão estiver ativo.
+![Botão toggle em funcionamento com apenas HTML e CSS](https://user-images.githubusercontent.com/72027449/171924663-8ae67343-3fb6-4185-af1c-1c5df5aa93ea.gif)
+
 
 ### Recursos úteis
 
