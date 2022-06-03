@@ -87,6 +87,7 @@ input[type="range"] {
         @include slider-thumb;
     }
     /* FIM */
+}
 ```
 
 #### Cor de fundo do controle deslizante
@@ -120,6 +121,7 @@ function handleSliderBackground() {
     slider.style.setProperty("--background", setPercentages);
 }
 ```
+![Porcentagens do linear gradient sendo adicionadas ao slider](https://user-images.githubusercontent.com/72027449/171923354-4645e0d6-7305-48df-ab31-141162750ed1.gif)
 
 
 #### Toggle button
