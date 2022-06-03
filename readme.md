@@ -156,6 +156,7 @@ No CSS, você basicamente esconde o `input`, e estiliza o `span` para criar o bo
     span::before {
         // estilização do elemento dentro do botão, que se move para a direita quando está ativo e para esquerda quando inativo
     }
+}
 ```
 
 Para a interação ocorrer, basta especificar o seletor `:checked` referente ao `input` e estilizar o botão diferente de quando está inativo, já que o botão em si (`span`) está envolvido em um `label` que faz referência ao campo invisível que sempre ganha ou perde o atributo `checked` quando é clicado.
@@ -170,7 +171,7 @@ input:checked + span {
 }
 ```
 
-![Botão toggle em funcionamento com apenas HTML e CSS](https://user-images.githubusercontent.com/72027449/171924663-8ae67343-3fb6-4185-af1c-1c5df5aa93ea.gif)
+![Botão toggle em funcionamento com apenas HTML e CSS](https://user-images.githubusercontent.com/72027449/171925727-4c255c29-1d36-4365-b535-07084ca3008c.gif)
 
 
 ### Recursos úteis
