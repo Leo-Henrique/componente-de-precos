@@ -126,7 +126,7 @@ function handleSliderBackground() {
 
 #### Toggle button
 
-Assim como no controle deslizante, achei que teria abrir mão do `input` padrão e criar um botão totalmente personalizado. Porém descobri que o `ìnput` do tipo `type="checkbox"` é aproveitado nessa ocasião, tornando possível a construção desse botão apenas com HTML e CSS.
+Assim como no controle deslizante, achei que teria abrir mão do `input` padrão e criar um botão totalmente personalizado. Porém descobri que o `input` do tipo `type="checkbox"` é aproveitado nessa ocasião, tornando possível a construção desse botão apenas com HTML e CSS.
 
 A estrutura HTML fica assim:
 ```html
