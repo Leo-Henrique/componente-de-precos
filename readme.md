@@ -121,8 +121,7 @@ function handleSliderBackground() {
     slider.style.setProperty("--background", setPercentages);
 }
 ```
-![Porcentagens do linear gradient sendo adicionadas ao slider](https://user-images.githubusercontent.com/72027449/171924223-1fea1d0c-fef9-4140-9ffb-29c638b843d3.gif)
-
+https://user-images.githubusercontent.com/72027449/175104575-1a13fefd-9e8b-4622-9325-3f9ff5865ec7.mp4
 
 #### Toggle button
 
@@ -171,7 +170,7 @@ input:checked + span {
 }
 ```
 
-![Botão toggle em funcionamento com apenas HTML e CSS](https://user-images.githubusercontent.com/72027449/171925727-4c255c29-1d36-4365-b535-07084ca3008c.gif)
+https://user-images.githubusercontent.com/72027449/175104660-1c66d002-816f-4bf7-ba3d-34e308c26add.mp4
 
 
 ### Recursos úteis
